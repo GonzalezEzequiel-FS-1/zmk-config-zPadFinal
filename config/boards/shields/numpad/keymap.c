@@ -3,12 +3,16 @@
 #include <dt-bindings/zmk/bt.h>
 
 /{
-    keymap {
-        compatible = "zmk, keymap"
-
+    &keymap {
+        compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &kp KP_N
-        }
+                &kp KC_NUMLOCK  &kp KC_KP_SLASH  &kp KC_KP_ASTERISK &kp KC_KP_MINUS
+                &nop             &kp KC_KP_9      &kp KC_KP_8        &kp KC_KP_7
+                &kp KC_KP_PLUS   &kp KC_KP_6      &kp KC_KP_5        &kp KC_KP_4
+                &nop             &kp KC_KP_3      &kp KC_KP_2        &kp KC_KP_1
+                &kp KC_KP_ENTER  &nop             &kp KC_KP_DOT      &kp KC_KP_0
+            >;
+        };
     }
 }
